@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<style>
+		body {
+			background-color: black;
+			text-align: center;
+		}
+		button {
+			background-color: white;
+			border: 5px solid black;
+			display: inline-block;
+			font-size: 35px;
+			font-family: 'arial';
+			cursor: pointer;
+		}	
+		button:hover {
+			animation-name: part1;
+			animation-duration: 0.5s;
+			background-color: #841e5a;
+			color: white;
+		}
+		button:active {
+			color: black;
+		}
+		@keyframes part1 {
+			from {background-color: white;}
+			to {	background-color: #841e5a;
+				color: white;
+				}
+		}
+		input {
+			background-color: #841e5a;
+			border: 5px solid black;
+			font-size: 15px;
+			color: white;
+			padding: 3px;
+			padding-left: 6px;
+		}
+		input::-webkit-input-placeholder {
+			color: white;
+		}
+	</style>
+	<script src="script.js"></script>
+	<button id="button_grab">grab session</button>
+	<button id="button_open">open session</button>
+	<input id="input_open" placeholder="Paste links here.">
+	<div id="main"></div>
+</body>
+</html>
+
