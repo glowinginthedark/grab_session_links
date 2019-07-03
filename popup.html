@@ -1,51 +1,69 @@
 <!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+</head>
 <html>
-<body>
-	<style>
-		body {
-			background-color: black;
-			text-align: center;
+<body style="
+	background-color: black;
+">
+
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
 		}
-		button {
+
+		.btn {
+			text-align: center;
 			background-color: white;
 			border: 5px solid black;
-			display: inline-block;
-			font-size: 35px;
+			font-size: 25px;
+			padding: 10px 15px;
+			margin: 5px 0px;
 			font-family: 'arial';
 			cursor: pointer;
-		}	
-		button:hover {
-			animation-name: part1;
-			animation-duration: 0.5s;
+			transition: all 0.1s;
+		}
+
+		.btn:hover {
 			background-color: #841e5a;
 			color: white;
 		}
-		button:active {
+
+		.btn:active {
 			color: black;
 		}
-		@keyframes part1 {
-			from {background-color: white;}
-			to {	background-color: #841e5a;
-				color: white;
-				}
-		}
+
 		input {
-			background-color: #841e5a;
-			border: 5px solid black;
-			font-size: 15px;
-			color: white;
+			margin: 5px;
+			font-size: 18px;
 			padding: 3px;
 			padding-left: 6px;
-		}
-		input::-webkit-input-placeholder {
 			color: white;
+			border: none;
+			background-color: #841e5a;
 		}
-	</style>
-	<script src="script.js"></script>
-	<button id="button_grab">grab session</button>
-	<button id="button_open">open session</button>
-	<input id="input_open" placeholder="Paste links here.">
-	<div id="main"></div>
-</body>
-</html>
 
+		#status {
+			margin: 6px;
+			margin-bottom: 10px;
+			font-size: 13px;
+			padding: 3px;
+			color: white;
+			background-color: grey;
+			text-align: center;
+			display: none;
+		}
+
+	</style>
+
+	<div class="btn" id="button_grab">grab <br> session</div>
+	<div class="btn" id="button_open">open <br> session</div>
+	<input id="input_open" placeholder="Paste links here.">
+	<div id="status">...</div>
+
+</body>
+
+	<script src="script.js"></script>
+
+</html>
